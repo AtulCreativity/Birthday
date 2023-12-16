@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Wishes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes textMoveAnimation {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(20px, 0);
+            }
+            50% {
+                transform: translate(0, 20px);
+            }
+            75% {
+                transform: translate(-20px, 0);
+            }
+            100% {
+                transform: translate(0, -20px);
+            }
+        }
+
+        @keyframes textFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes blinkEffect {
+            0%, 100% {
+                color: #ff00ff;
+            }
+            50% {
+                color: #00ff00;
+            }
+        }
+
+        header {
+            background: linear-gradient(45deg, #ff6600, #ff3366);
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            animation: scaleIn 1s ease-in-out;
+        }
+
+        .birthday-text {
+            display: inline-block;
+            animation: textMoveAnimation 2s infinite, fadeIn 1s ease-in-out;
+        }
+
+        #birthday-wish {
+            max-width: 100%;
+            margin: 20px 10px;
+            padding: 20px;
+            background: linear-gradient(45deg, #ffffff, #ffe6f0) center/cover no-repeat, url('path/to/transparent-image.png') center/contain no-repeat;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #birthday-wish img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #birthday-wish p {
+            animation: textFadeIn 1s ease-in-out;
+            color: #333;
+        }
+
+        #birthday-wish .name {
+            animation: blinkEffect 2s infinite, fadeIn 1s ease-in-out;
+            color: #ff3366;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: linear-gradient(45deg, #ff6600, #ff3366);
+            color: #fff;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Background pattern for desktop view */
+        @media screen and (min-width: 768px) {
+            body {
+                background: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd),
+                            linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd);
+                background-size: 20px 20px;
+                background-position: 0 0, 10px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><span class="birthday-text">Happy Birthday!</span></h1>
+    </header>
+
+    <section id="birthday-wish">
+        <img src="Cake.jpeg" alt="Transparent Image">
+        <p>Dear <span class="name" style="animation: fadeIn 1s ease-in-out;">Candy</span>,</p>
+        <p style="animation: textFadeIn 1s ease-in-out;">Wishing you a fantastic birthday filled with joy, laughter, and all the things you love.</p>
+        <p style="animation: textFadeIn 1s ease-in-out;">May this year bring you great happiness and success!</p>
+        <p style="animation: textFadeIn 1s ease-in-out;">Enjoy,<br><br>Atul 😁</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+
+</body>
+</html>
